@@ -1,35 +1,16 @@
 Tryhackme Hammer Walk through
 =============================
 
-[![Muhammad Ahsan Ijaz](https://miro.medium.com/v2/resize:fill:64:64/1*ZPj4HqjlCzh2TsxaXltgLQ.jpeg)](https://medium.com/@ahsanijaz1?source=post_page---byline--765ae11567f6---------------------------------------)
-
-[Muhammad Ahsan Ijaz](https://medium.com/@ahsanijaz1?source=post_page---byline--765ae11567f6---------------------------------------)
-
-5 min read
-
-·
-
-Jul 23, 2025
-
-[nameless link](https://medium.com/m/signin?actionUrl=https%3A%2F%2Fmedium.com%2F_%2Fvote%2Fsystem-weakness%2F765ae11567f6&operation=register&redirect=https%3A%2F%2Fsystemweakness.com%2Ftryhackme-hammer-walk-through-765ae11567f6&user=Muhammad+Ahsan+Ijaz&userId=e8b18099f9da&source=---header_actions--765ae11567f6---------------------clap_footer------------------)
-
---
-
-[nameless link](https://medium.com/m/signin?actionUrl=https%3A%2F%2Fmedium.com%2F_%2Fbookmark%2Fp%2F765ae11567f6&operation=register&redirect=https%3A%2F%2Fsystemweakness.com%2Ftryhackme-hammer-walk-through-765ae11567f6&source=---header_actions--765ae11567f6---------------------bookmark_footer------------------)
-
-Listen
-
-Share
-
-Use your exploitation skills to bypass authentication mechanisms on a website and get RCE.
+**Use your exploitation skills to bypass authentication mechanisms on a website and get RCE.***
 
 ![Hammer ctf walk through](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*r3j4i6SC65453qMJjcUB1Q.png)
 
-Hi everyone , In this ctf we have to find two flags for completing this room
+**Hi everyone**, In this ctf we have to find two flags for completing this room
 **1)**What is the flag value after logging in to the dashboard?
 **2)**What is the content of the file **/home/ubuntu/flag.txt**?
 
 After starting machine we got an ip address , then first we have to find what are the open ports available , for this task i used Rustscan for fast port scanning you can use nmap but it is slow as compared to rustscan
+
 
 ![port scanning](https://miro.medium.com/v2/resize:fit:1190/format:webp/1*h1dZkMi_cYFHYsBi_cVcTQ.png)
 
@@ -38,6 +19,7 @@ As we can see two ports are open , one is **22** It allows users to securely exe
 ![login](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*Y2M-ZCPIyEIqqamDP1eC2w.png)
 
 first thing that came to my mind is brute forcing but in this case i don’t have any idea about email address/usernames and password. so then I try to find all kind of relevant information that plays a role in logging in to dashboard
+
 
 ![curl command sending post request](https://miro.medium.com/v2/resize:fit:1176/format:webp/1*HlQOIK9mNOV0qv1i6Vndgw.png)
 
