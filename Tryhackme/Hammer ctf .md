@@ -6,6 +6,7 @@ Description : Use your exploitation skills to bypass ***authentication mechanism
 
 
 Hi everyone ! , In this ctf we have to find two flags for completing this room
+
 **1)** What is the flag value after logging in to the dashboard?
 
 **2)** What is the content of the file **/home/ubuntu/flag.txt**?
