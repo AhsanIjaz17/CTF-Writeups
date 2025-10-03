@@ -1,33 +1,12 @@
-Tryhackme Hammer Walk through
-=============================
+***Tryhackme Hammer CTF Walkthrough***
 
-[![Muhammad Ahsan Ijaz](https://miro.medium.com/v2/resize:fill:64:64/1*ZPj4HqjlCzh2TsxaXltgLQ.jpeg)](https://medium.com/@ahsanijaz1?source=post_page---byline--765ae11567f6---------------------------------------)
-
-[Muhammad Ahsan Ijaz](https://medium.com/@ahsanijaz1?source=post_page---byline--765ae11567f6---------------------------------------)
-
-5 min read
-
-·
-
-Jul 23, 2025
-
-[nameless link](https://medium.com/m/signin?actionUrl=https%3A%2F%2Fmedium.com%2F_%2Fvote%2Fsystem-weakness%2F765ae11567f6&operation=register&redirect=https%3A%2F%2Fsystemweakness.com%2Ftryhackme-hammer-walk-through-765ae11567f6&user=Muhammad+Ahsan+Ijaz&userId=e8b18099f9da&source=---header_actions--765ae11567f6---------------------clap_footer------------------)
-
---
-
-[nameless link](https://medium.com/m/signin?actionUrl=https%3A%2F%2Fmedium.com%2F_%2Fbookmark%2Fp%2F765ae11567f6&operation=register&redirect=https%3A%2F%2Fsystemweakness.com%2Ftryhackme-hammer-walk-through-765ae11567f6&source=---header_actions--765ae11567f6---------------------bookmark_footer------------------)
-
-Listen
-
-Share
-
-Use your exploitation skills to bypass authentication mechanisms on a website and get RCE.
+Description : Use your exploitation skills to bypass ***authentication mechanisms***on a website and get RCE.
 
 ![Hammer ctf walk through](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*r3j4i6SC65453qMJjcUB1Q.png)
 
-Hi everyone , In this ctf we have to find two flags for completing this room
-**1)**What is the flag value after logging in to the dashboard?
-**2)**What is the content of the file **/home/ubuntu/flag.txt**?
+Hi everyone ! , In this ctf we have to find two flags for completing this room
+**1)** What is the flag value after logging in to the dashboard?
+**2)** What is the content of the file **/home/ubuntu/flag.txt**?
 
 After starting machine we got an ip address , then first we have to find what are the open ports available , for this task i used Rustscan for fast port scanning you can use nmap but it is slow as compared to rustscan
 
@@ -72,13 +51,15 @@ In this script url = “http://10.10.123.224:1337/reset_password.php" you have t
 
 ![python script](https://miro.medium.com/v2/resize:fit:760/format:webp/1*jJZR-C4AyweNJpQlP7K2vg.png)
 
-after finding the recovery code it also set the password to **“Passowrd123**” then now we can login easily
+After finding the recovery code it also set the password to **“Passowrd123**” then now we can login easily.
 
 ![flag 1](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*XPDFm9CVXz9_HkMfGLH35Q.png)
 
 As we can see after logging into dashboard we received a flag
 
 ![burpsuite request](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*lLDfyAA0g_tBM-foIzzq5g.png)
+ 
+==========================================
 
 After the capturing the request in a burpsuite navigate to burp repeater send the request you got a jwt token . also when i try to execute “cat” command it gives an error “command not allowed “so in this scenario we have to escalate our privileges to admin . I decode the JWT token via JWT debugger you can also use jwt.io.
 
@@ -104,6 +85,8 @@ At last write this command **cat /home/ubuntu/flag.txt** you will get a flag
 
 ![flag 2](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*6G6UAyJuyHZN_3XWQia2pQ.png)
 
-If you enjoyed this blog, don’t forget to **like** and **follow** for more content.
+⭐ If you find these writeup helpful, consider giving this repo a **star** to support my work!  
+
 
 You can also follow me on [**LinkedIn**](https://www.linkedin.com/in/muhammad-ahsanijaz/) or [**GitHub**](https://github.com/AhsanIjaz17) for more.
+
