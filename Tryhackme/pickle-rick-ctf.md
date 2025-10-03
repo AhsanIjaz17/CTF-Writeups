@@ -1,35 +1,16 @@
-Pickle Rick -Tryhackme CTF walk through
+***Pickle Rick -Tryhackme CTF walk through***
 =======================================
 
-[![Muhammad Ahsan Ijaz](https://miro.medium.com/v2/resize:fill:64:64/1*ZPj4HqjlCzh2TsxaXltgLQ.jpeg)](https://medium.com/@ahsanijaz1?source=post_page---byline--0e7b4ab7ebf3---------------------------------------)
 
-[Muhammad Ahsan Ijaz](https://medium.com/@ahsanijaz1?source=post_page---byline--0e7b4ab7ebf3---------------------------------------)
-
-5 min read
-
-·
-
-Aug 17, 2025
-
-[nameless link](https://medium.com/m/signin?actionUrl=https%3A%2F%2Fmedium.com%2F_%2Fvote%2Fsystem-weakness%2F0e7b4ab7ebf3&operation=register&redirect=https%3A%2F%2Fsystemweakness.com%2Fpickle-rick-tryhackme-ctf-walk-through-0e7b4ab7ebf3&user=Muhammad+Ahsan+Ijaz&userId=e8b18099f9da&source=---header_actions--0e7b4ab7ebf3---------------------clap_footer------------------)
-
---
-
-[nameless link](https://medium.com/m/signin?actionUrl=https%3A%2F%2Fmedium.com%2F_%2Fbookmark%2Fp%2F0e7b4ab7ebf3&operation=register&redirect=https%3A%2F%2Fsystemweakness.com%2Fpickle-rick-tryhackme-ctf-walk-through-0e7b4ab7ebf3&source=---header_actions--0e7b4ab7ebf3---------------------bookmark_footer------------------)
-
-Listen
-
-Share
-
-This Rick and Morty-themed challenge requires you to exploit a web server and find three ingredients to help Rick make his potion and transform himself back into a human from a pickle.
+***Description***: This Rick and Morty-themed challenge requires you to exploit a web server and find three ingredients to help Rick make his potion and transform himself back into a human from a pickle.
 
 ![Pickle Rick](https://miro.medium.com/v2/resize:fit:1004/format:webp/1*ip2ih9ZJcj4RrysV8Uq5pw.png)
 
 Hi everyone , In this blog i included all the enumeration & exploitation steps that i took for finding all theses following flags
 
-*   **Q1:**What is the first ingredient that Rick needs?
-*   **Q2:**What is the second ingredient in Rick’s potion?
-*   **Q3:**What is the last and final ingredient?
+*   **Q1:** What is the first ingredient that Rick needs?
+*   **Q2:** What is the second ingredient in Rick’s potion?
+*   **Q3:** What is the last and final ingredient?
 
 So lets dive in first with Reconnaissance(initial information gathering)
 we given an ip address by “starting machine”,now first we will find all the ports and service versions of these ports with **“Nmap”**
@@ -70,7 +51,7 @@ But when I try awk ‘{print}’ file its execute . and Boom we find out first f
 
 ![Flag1](https://miro.medium.com/v2/resize:fit:996/format:webp/1*wlvYf9kf-mtuIXUMI6jNbg.png)
 
-For finding second flag w**e** used this command again **awk ‘{print}’ clue.txt** for seeing content of this file.
+For finding second flag I used this command again **awk ‘{print}’ clue.txt** for seeing content of this file.
 
 ![clue.txt content](https://miro.medium.com/v2/resize:fit:1140/format:webp/1*rn_oinuZGLEYbFaBJ-BWAA.png)
 
@@ -122,6 +103,6 @@ Here we go we found our last flag of this room
 
 ![3rd Flag](https://miro.medium.com/v2/resize:fit:832/format:webp/1*A3NjDmzVCreIC-JIBJ6AwA.png)
 
-If you enjoyed this blog, don’t forget to **like** 👍 and **follow** for more content.
+⭐ If you find these writeup helpful, consider giving this repo a **star** to support my work!  
 
 You can also follow me on [LinkedIn](https://www.linkedin.com/in/muhammad-ahsanijaz) or GitHub for more
